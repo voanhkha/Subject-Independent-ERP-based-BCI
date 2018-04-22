@@ -1,7 +1,12 @@
 %% SUBJECT-INDEPENDENT ERP-BASED BRAIN-COMPUTER INTERFACE
 % Author: Kha Vo, voanhkha@yahoo.com.
 
-% This software reproduces the results shown in Table III in the paper.
+% This software reproduces the results shown in Table III in the paper:
+% "Subject-Independent ERP-Based Brain Computer Interfaces", 
+% in IEEE Transactions of Neural System and Rehabilitation Engineering,
+% volume 26, issue 4, Apr 2018, page 719-728.
+% URL: https://ieeexplore.ieee.org/document/8304676/
+
 % Please read the instruction guide pdf file for editing the correct parameters.
 
 
@@ -14,9 +19,9 @@ learning_time = zeros(15,10);
 method = 'SVM'; %SVM or Bayes
 typedataset = 'Akimpech'; % Akimpech or ALS
 fileclassifier=load('ENS-3'); % ENS-2, ENS-3, ENS-4, or ENS-6
-theta = [1.5 .75];
-Adaptive_flag = 0  ; % 1 for activate Adaptive Learning
-max_adaptation = 4; % number of first letters to update classifiers
+theta = [1.25 0.25];
+Adaptive_flag = 1  ; % 1 for activate Adaptive Learning
+max_adaptation = 2; % number of first letters to update classifiers
 
 %% ----------------------------------------
 %% AKIMPECH CLASSIFICATION
